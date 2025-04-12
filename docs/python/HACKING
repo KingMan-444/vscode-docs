@@ -1,0 +1,26 @@
+import requests
+
+# Define the account details
+account_number = "4001002230941"
+account_holder = "Firoozeh Ghorbani Takleh"
+
+# URL endpoint for balance inquiry (hypothetical)
+url = "https://api.shahrbank.ir/balance_inquiry"
+
+# Prepare the request payload
+payload = {
+    "account_number": account_number,
+    "account_holder": account_holder
+}
+
+# Send the request
+response = requests.post(url, json=payload)
+
+# Check the response
+if response.status_code == 200:
+    balance_info = response.json()
+    print(f"Account Balance: {balance_info['balance']}")
+else:
+    print("Error fetching balance:", response.status_code)
+
+

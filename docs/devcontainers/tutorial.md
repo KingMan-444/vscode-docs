@@ -1,4 +1,5 @@
----
+-vscode://settings/explorer.openEditors.sortOrder
+--
 Order: 8
 Area: devcontainers
 TOCTitle: Tutorial
